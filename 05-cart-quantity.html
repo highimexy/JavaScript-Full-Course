@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>06 Variables</title>
+    <style>
+      body{
+        margin-top: 20%;
+        text-align: center;
+        background-color: #121212;
+      }
+
+      h1{
+        font-size: 48px;
+        font-family: monospace;
+        color:rgb(255, 255, 255);
+      }
+
+      button{
+        font-size: 48px;
+        font-family: monospace;
+        font-weight: 700;
+        color: slateblue;
+        background-color: #121212;
+        border-radius: 20px;
+        margin: 4px;
+        cursor: pointer;
+        border-width: 4px;
+        border-color: white;
+      }
+    </style>
+  </head>
+  <body>
+      
+      <h1>06 Variables</h1>
+      
+      <button onclick="
+      console.log(`🚨 Cart Quantity = ${cartQuantity} 🚨`) //wywolujemy let cartQuantity = 0;
+      ">Show Quantity</button>
+      
+      <button onclick="
+        cartQuantity = cartQuantity + 1; //zwiekszamy o jeden
+        console.log(`🚨 Cart Quantity = ${cartQuantity} 🚨`)
+      ">Add to Cart</button>
+      
+      <button onclick="
+      cartQuantity = cartQuantity + 2; //zwiekszamy o dwa
+        console.log(`Cart Quantity = ${cartQuantity}`)
+      ">+2</button>
+      
+      <button onclick="
+      cartQuantity = cartQuantity + 3; //zwiekszamy o trzy
+        console.log(`Cart Quantity = ${cartQuantity}`)
+      ">+3</button>
+
+      <button onclick="
+        cartQuantity = 0; // reset czyli wracamy do 0
+        console.log('⟳ Cart was reset.');
+        console.log(`Cart Quantity = ${cartQuantity}`)
+      ">Reset Cart</button>
+
+    <script>
+      //zmienna
+      let cartQuantity = 0;
+    </script>
+  </body>
+</html>
