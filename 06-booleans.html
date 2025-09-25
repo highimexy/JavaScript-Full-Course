@@ -3,7 +3,7 @@
   <head>
     <title>06 Booleans</title>
     <style>
-      h1{
+      h1 {
         text-align: center;
         font-family: monospace;
       }
@@ -13,9 +13,8 @@
     <h1>Booleans</h1>
 
     <script>
-
-      true
-      false
+      true;
+      false;
 
       // COMPARISON OPERATORS
 
@@ -29,40 +28,40 @@
       // != not equal to and turn in to the same typeof
 
       // !== not equal to
-      
+
       console.log(3 < 5);
 
       console.log(3 > 5);
 
       if (true) {
-        console.log('hello');
-      } else{
-        console.log('else');
+        console.log("hello");
+      } else {
+        console.log("else");
       }
       //if else
       if (30 >= 16) {
-        console.log('You can drive');
+        console.log("You can drive");
       } else {
-        console.log('You can not drive');
+        console.log("You can not drive");
       }
       //if , else if
 
-            if (15 >= 16) {
-        console.log('You can drive');
+      if (15 >= 16) {
+        console.log("You can drive");
       } else if (15 >= 14) {
-        console.log('Almost there');
+        console.log("Almost there");
       } else {
-        console.log('You can not drive');
+        console.log("You can not drive");
       }
       //if, else if, else, with variable
       const age = 15;
 
-                  if (age >= 16) {
-        console.log('You can drive');
+      if (age >= 16) {
+        console.log("You can drive");
       } else if (age >= 14) {
-        console.log('Almost there');
+        console.log("Almost there");
       } else {
-        console.log('You can not drive');
+        console.log("You can not drive");
       }
 
       //and operator
@@ -73,6 +72,49 @@
       console.log(false || false);
       // odwraca !true = false, !false = true
       console.log(!true);
+
+      //truthy and falsy values
+
+      if (5) {
+        console.log("truthy");
+      }
+
+      //falsy values = false, 0, "", Nan, undefinde, null
+
+      if (0) {
+        console.log("falsy");
+      }
+
+
+
+      const cartQuantity = 4;
+
+      if (cartQuantity) {
+        console.log('cart has products');
+      }
+
+      //Nan
+      console.log('text' / 5);
+
+      //undefined
+
+      let variable1;
+      console.log(variable1);
+
+
+      //ternary operator
+      // = shortcut for if else statement
+
+      const result = true ? 'truthy' : 'falsy'
+
+      console.log(result);
+
+      // Guard operator
+      // = shortcut for if statement
+      false && console.log('hello');
+
+      const message = true && 'hello';
+      console.log(message);
     </script>
   </body>
 </html>
