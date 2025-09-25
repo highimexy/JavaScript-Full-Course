@@ -51,6 +51,35 @@
       //odejmowanie property
       delete product.newProperty;
       console.log(product);
+
+      console.log('------------');
+
+      const product2 = {
+        name: 'shirt',
+        ['delivery-time']: '1 day',   //nie trzeba nawiasow  
+        rating: {   //objekt w obiekcie
+          stars: 4.5,
+          count: 87,
+        }, //method - funkcja w srodku obiektu
+        fun: function function1 () {
+          console.log('function inside object');
+        }
+      }
+      console.log(product2);
+      console.log(product2.name);
+      console.log(product2['name'])
+      console.log(product2);
+      //normalnie nie da rady delivery-time bo javva script mysli ze to jest dzialanie matematyczne
+      console.log(product2['delivery-time']);
+
+      console.log('--------------');
+
+      console.log(product2.rating.stars)
+      product2.fun();
+      
+      console.log('--------------');
+
+      console.log(typeof console.log);
     </script>
   </body>
 </html>
