@@ -87,11 +87,7 @@
 
     <script>
 
-      const score = {
-        wins: 0,
-        losses: 0,
-        ties: 0,
-      };
+      const score = JSON.parse(localStorage.getItem('score'));
 
       //Funkcja playGame z parametrem playerMove
       function playGame(playerMove) {
@@ -132,6 +128,8 @@
           score.ties += 1;
         }
         
+        localStorage.setItem('score', JSON.stringify(score));
+
         alert(
           `You picked ${playerMove}. Computer picked ${computerMove}. ${result}
 Wins: ${score.wins}, Losses: ${score.losses}, Ties: ${score.ties}`
@@ -151,7 +149,7 @@ Wins: ${score.wins}, Losses: ${score.losses}, Ties: ${score.ties}`
         } else if (randomNumber >= 2 / 3 && randomNumber < 1) {
           computerMove = "Scissors";
         }
-        
+
         //returning value of function
         return computerMove;
       }
