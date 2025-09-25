@@ -46,20 +46,7 @@
     <button
       class="hover-effect"
       onclick="
-
-      const computerMove = pickComputerMove(); 
-
-      let result = '';
-
-      if (computerMove === 'Rock') {
-        result = 'Tie. ';
-      } else if (computerMove === 'Paper') {
-        result = 'You lose. ';
-      } else if (computerMove === 'Scissors') {
-        result = 'You win. '
-      }
-
-      alert(`You picked rock 🗿. Computer picked ${computerMove}. ${result}` );
+      playGame('Rock'); // wywołanie funkcji z przypisanem parametrem
     "
     >
       Rock
@@ -68,20 +55,7 @@
     <button
       class="hover-effect"
       onclick="
-
-      const computerMove = pickComputerMove(); 
-
-      let result = '';
-
-      if (computerMove === 'Rock') {
-        result = 'You win. ';
-      } else if (computerMove === 'Paper') {
-        result = 'Tie. ';
-      } else if (computerMove === 'Scissors') {
-        result = 'You lose. '
-      }
-
-      alert(`You picked Paper 🧻. Computer picked ${computerMove}. ${result}` );
+      playGame('Paper'); // wywołanie funkcji z przypisanem parametrem
     "
     >
       Paper
@@ -90,30 +64,50 @@
     <button
       class="hover-effect"
       onclick="
-
-      const computerMove = pickComputerMove(); 
-
-      let result = '';
-
-      if (computerMove === 'Rock') {
-        result = 'You lose. ';
-      } else if (computerMove === 'Paper') {
-        result = 'You win. ';
-      } else if (computerMove === 'Scissors') {
-        result = 'Tie. '
-      }
-
-      alert(`You picked Scissors ✂️. Computer picked ${computerMove}. ${result}` );
+      playGame('Scissors'); // wywołanie funkcji z przypisanem parametrem
     "
     >
       Scissors
     </button>
 
     <script>
+      //Funkcja playGame z parametrem playerMove
+      function playGame(playerMove) {
+        const computerMove = pickComputerMove();
+        let result = "";
 
-      //funkcja
+        if (playerMove === "Scissors") {
+          if (computerMove === "Rock") {
+            result = "You lose. ";
+          } else if (computerMove === "Paper") {
+            result = "You win. ";
+          } else if (computerMove === "Scissors") {
+            result = "Tie. ";
+          }
+        } else if (playerMove === "Paper") {
+          if (computerMove === "Rock") {
+            result = "You win. ";
+          } else if (computerMove === "Paper") {
+            result = "Tie. ";
+          } else if (computerMove === "Scissors") {
+            result = "You lose. ";
+          }
+        } else if (playerMove === "Rock") {
+          if (computerMove === "Rock") {
+            result = "Tie. ";
+          } else if (computerMove === "Paper") {
+            result = "You lose. ";
+          } else if (computerMove === "Scissors") {
+            result = "You win. ";
+          }
+        }
 
-  
+        alert(
+          `You picked ${playerMove}. Computer picked ${computerMove}. ${result}`
+        );
+      }
+
+      //funkcja pickComputerMove
       function pickComputerMove() {
         const randomNumber = Math.random();
 
@@ -129,7 +123,6 @@
 
         //returning value of function
         return computerMove;
-
       }
     </script>
   </body>

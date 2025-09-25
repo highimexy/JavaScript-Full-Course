@@ -3,19 +3,19 @@
   <head>
     <title>Functions</title>
     <style>
-      body{
+      body {
         margin-top: 20%;
         text-align: center;
         background-color: #121212;
       }
 
-      h1{
+      h1 {
         font-size: 48px;
         font-family: monospace;
-        color:rgb(255, 255, 255);
+        color: rgb(255, 255, 255);
       }
 
-      button{
+      button {
         font-size: 48px;
         font-family: monospace;
         font-weight: 700;
@@ -33,13 +33,38 @@
     <h1>Functions</h1>
 
     <script>
-      function function1(){
-        console.log('hello');
+      //funckaj bez parametrów
+      function function1() {
+        console.log("hello");
         console.log(2 + 2);
       }
 
       function1();
       function1();
+
+      //funkcja bez parametrów
+      function calculateTax1() {
+        console.log(1000 * 0.1);
+        console.log("funckaj bez parametrów");
+      }
+
+      calculateTax1();
+
+      //funkcja z parametrami
+      function calculateTax(cost, taxPercent) {
+        console.log(cost * taxPercent);
+      }
+      //wywołanie funkcji , tutaj jedno wywołanie nie ma przypisanej wartości tex percent i jest Nan
+      calculateTax(2000, 0.2);
+      calculateTax(5000);
+
+      //funkcja z parametrami z default 
+      function calculateTax(cost, texPercent = 0.2) {
+        console.log(cost * texPercent);
+      }
+      //wywołanie funkcji
+      calculateTax(2000, 0.2);
+      calculateTax(5000,);
     </script>
   </body>
 </html>
