@@ -1,99 +1,155 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Objects</title>
-    <style>
-      body {
-        margin-top: 20%;
-        text-align: center;
-        background-color: #121212;
+
+<head>
+  <title>Objects</title>
+  <style>
+    body {
+      margin-top: 20%;
+      text-align: center;
+      background-color: #121212;
+    }
+
+    h1 {
+      font-size: 48px;
+      font-family: monospace;
+      color: rgb(255, 255, 255);
+    }
+
+    button {
+      font-size: 48px;
+      font-family: monospace;
+      font-weight: 700;
+      color: slateblue;
+      background-color: #121212;
+      border-radius: 20px;
+      margin: 4px;
+      cursor: pointer;
+      border-width: 4px;
+      border-color: white;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>Objects</h1>
+
+  <script>
+    const product = {
+      name: 'socks',
+      price: 1090,
+    };
+    console.log(product);
+    console.log(product.name);
+    console.log(product.price);
+
+    product.name = 'rocket';
+
+    console.log(product.name);
+    //dodawanie property
+    product.newProperty = true;
+    console.log(product);
+
+    //odejmowanie property
+    delete product.newProperty;
+    console.log(product);
+
+    console.log('------------');
+
+    const product2 = {
+      name: 'shirt',
+      ['delivery-time']: '1 day',   //nie trzeba nawiasow  
+      rating: {   //objekt w obiekcie
+        stars: 4.5,
+        count: 87,
+      }, //method - funkcja w srodku obiektu
+      fun: function function1() {
+        console.log('function inside object');
       }
+    }
+    console.log(product2);
+    console.log(product2.name);
+    console.log(product2['name'])
+    console.log(product2);
+    //normalnie nie da rady delivery-time bo javva script mysli ze to jest dzialanie matematyczne
+    console.log(product2['delivery-time']);
 
-      h1 {
-        font-size: 48px;
-        font-family: monospace;
-        color: rgb(255, 255, 255);
+    console.log('--------------');
+
+    console.log(product2.rating.stars)
+    product2.fun();
+
+    console.log('--------------');
+
+    console.log(typeof console.log);
+
+    //We use JSON when we send data between computers, when we store data
+
+
+    //JSON nie wspiera funcji
+    //zamiana js w JSON
+    console.log(JSON.stringify(product2));
+    //zamiana JSON w js
+    const jsonString = JSON.stringify(product2);
+    console.log(JSON.parse(jsonString));
+
+    //LOCAL STORAGE
+
+    console.log('--------------');
+
+    //5:10
+    //method .lenght
+    console.log('hello'.length);
+    //tak zwane auto boxing
+    console.log('hello'.toUpperCase());
+
+    console.log('--------------');
+
+    //objects are references
+
+    const object1 = {
+      message: 'hello'
+    };
+    //copy by references
+    const object2 = object1;
+
+    object1.message = 'Good job';
+    console.log(object1);
+
+    console.log(object2);
+
+    const object3 = {
+      message: 'Good job',
+    };
+
+    console.log(object3 === object2);
+    console.log(object3.message === object2.message);
+
+    const object4 = {
+      message: 'Good job',
+      price: 799,
+    };
+    const message = object4.message;
+    //robi to samo
+    /*
+    const { message, price } = object4;
+    */
+
+
+    const object5 = {
+      //message: message,
+      message,    //shorthand to samo co u gory
+      //method: function function1 () {
+        //console.log('method');
+      //}
+      method() {
+        console.log('method');  //to samo co wyzej
       }
+    };
+    console.log(object5);
 
-      button {
-        font-size: 48px;
-        font-family: monospace;
-        font-weight: 700;
-        color: slateblue;
-        background-color: #121212;
-        border-radius: 20px;
-        margin: 4px;
-        cursor: pointer;
-        border-width: 4px;
-        border-color: white;
-      }
-    </style>
-  </head>
-  <body>
-    <h1>Objects</h1>
+    object5.method();
+  </script>
+</body>
 
-    <script>
-      const product = {
-        name: 'socks',
-        price: 1090,
-      };
-      console.log(product);
-      console.log(product.name);
-      console.log(product.price);
-
-      product.name = 'rocket';
-
-      console.log(product.name);
-      //dodawanie property
-      product.newProperty = true;
-      console.log(product);
-
-      //odejmowanie property
-      delete product.newProperty;
-      console.log(product);
-
-      console.log('------------');
-
-      const product2 = {
-        name: 'shirt',
-        ['delivery-time']: '1 day',   //nie trzeba nawiasow  
-        rating: {   //objekt w obiekcie
-          stars: 4.5,
-          count: 87,
-        }, //method - funkcja w srodku obiektu
-        fun: function function1 () {
-          console.log('function inside object');
-        }
-      }
-      console.log(product2);
-      console.log(product2.name);
-      console.log(product2['name'])
-      console.log(product2);
-      //normalnie nie da rady delivery-time bo javva script mysli ze to jest dzialanie matematyczne
-      console.log(product2['delivery-time']);
-
-      console.log('--------------');
-
-      console.log(product2.rating.stars)
-      product2.fun();
-      
-      console.log('--------------');
-
-      console.log(typeof console.log);
-
-      //We use JSON when we send data between computers, when we store data
-
-
-      //JSON nie wspiera funcji
-      //zamiana js w JSON
-      console.log(JSON.stringify(product2));
-      //zamiana JSON w js
-      const jsonString = JSON.stringify(product2);
-      console.log(JSON.parse(jsonString));
-
-      //LOCAL STORAGE
-
-      
-    </script>
-  </body>
 </html>
