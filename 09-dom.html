@@ -37,30 +37,20 @@
 <body>
     <h1>DOM</h1>
     <button>hello</button>
+    <button class="js-button">Second button</button>
 
     <script>
     
+    console.log(document.querySelector('button').innerHTML);
     
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
+    document.querySelector('button')
+      .innerHTML = 'Changed';
+    //.js-button = class selector
+    document.querySelector('.js-button')
+      .innerHTML = 'Js-button changed'
+
+    const buttonElement = document.querySelector('.js-button');
+    console.log(buttonElement);
     
     
     /*
