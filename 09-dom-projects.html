@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>DOM PROJECTS</title>
+    <style>
+        body {
+            text-align: center;
+            background-color: #121212;
+        }
+
+        h1 {
+            font-size: 70px;
+            font-weight: 400;
+                font-family: monospace;
+            color: #ffffff;
+            text-shadow: 0px 0px 5px slateblue, 0px 0px 10px slateblue, 0px 0px 10px slateblue,
+                0px 0px 20px slateblue;
+        }
+
+        button {
+            font-size: 48px;
+            font-family: monospace;
+            font-weight: 700;
+            color: slateblue;
+            background-color: #121212;
+            border-radius: 20px;
+            margin: 4px;
+            cursor: pointer;
+            border-width: 4px;
+            border-color: white;
+        }
+
+        a {
+            font-size: 48px;
+            font-family: monospace;
+            font-weight: 700;
+            color: slateblue;
+            background-color: #121212;
+            border-radius: 20px;
+            margin: 4px;
+            cursor: pointer;
+            border-width: 4px;
+            border-color: white;
+        }
+
+        p {
+            font-size: 40px;
+            font-weight: 400;
+            font-family: monospace;
+            color: slateblue;
+          }   
+    </style>
+</head>
+
+<body>
+
+    <h1>Youtube subscribe Button</h1>
+    <button onclick="
+      const buttonElement = document.querySelector('.js-subscribe-button');
+
+      if(buttonElement.innerHTML === 'Subscribe') {
+        buttonElement.innerHTML = 'Subscribed'
+      } else {
+        buttonElement.innerHTML = 'Subscribe'
+      }
+    " class="js-subscribe-button">Subscribe</button>
+
+    <h1>Rock Paper Scissors</h1>
+    <a href="https://www.google.com/" target="_blank">Click here</a>
+
+    <h1>Amazon Shipping Calculator</h1>
+    <p>Orders under $40 = +$10 shipping</p>
+    <p>Orders</p>
+    <button>hello</button>
+    </script>
+</body>
+
+</html>
