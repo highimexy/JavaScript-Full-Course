@@ -57,13 +57,9 @@
 
     <h1>Youtube subscribe Button</h1>
     <button onclick="
-      const buttonElement = document.querySelector('.js-subscribe-button');
 
-      if(buttonElement.innerHTML === 'Subscribe') {
-        buttonElement.innerHTML = 'Subscribed'
-      } else {
-        buttonElement.innerHTML = 'Subscribe'
-      }
+        subscribe();
+
     " class="js-subscribe-button">Subscribe</button>
 
     <h1>Rock Paper Scissors</h1>
@@ -73,7 +69,18 @@
     <p>Orders under $40 = +$10 shipping</p>
     <p>Orders</p>
     <button>hello</button>
-    </script>
+   <script>
+    function subscribe () {
+        const buttonElement = document.querySelector('.js-subscribe-button');
+
+      if(buttonElement.innerHTML === 'Subscribe') {
+        buttonElement.innerHTML = 'Subscribed'
+      } else {
+        buttonElement.innerHTML = 'Subscribe'
+      }        
+    }
+
+   </script>
 </body>
 
 </html>
