@@ -85,12 +85,22 @@
     <h1>Amazon Shipping Calculator</h1>
     <p>Orders under $40 = +$10 shipping</p>
     <p>Orders over $40 = FREE shipping</p>
-    <input placeholder="Cost of order" class="js-cost-input"> 
+    <input placeholder="Cost of order" class="js-cost-input" onkeydown="
+        handleCostKeydown ();
+    "> 
     <button onclick="
     calculateTotal();
     " >Calculate</button>
     <h1 class="js-total-cost"></h1>
    <script>
+
+    function handleCostKeydown () {
+       console.log(event.key);
+        if (event.key === 'Enter') {
+            calculateTotal();
+        } 
+    }
+
     function subscribe () {
         const buttonElement = document.querySelector('.js-subscribe-button');
 
