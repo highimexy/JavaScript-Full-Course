@@ -1,0 +1,37 @@
+      body {
+        background-color: #121212;
+      }
+
+      h1 {
+        font-size: 48px;
+        font-family: monospace;
+        color: rgb(255, 255, 255);
+      }
+
+      button {
+        font-family: monospace;
+        font-weight: 700;
+        color: slateblue;
+        background-color: #121212;
+        border-radius: 20px;
+        margin: 4px;
+        cursor: pointer;
+        border-width: 4px;
+        border-color: white;
+      }
+
+      .hover-effect {
+        transition: all 0.5s ease; /* smooth animation */
+      }
+
+      .hover-effect:hover {
+        background-color: slateblue;
+        color: white; /* change background on hover */ /* change text color */
+        transform: scale(1.02); /* slight zoom */
+      }
+
+      .move-icon{
+        height: 50px;
+        padding: 10px;
+        
+      }

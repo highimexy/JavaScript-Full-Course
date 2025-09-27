@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Rock Paper Scissors</title>
+    
+    <link rel="stylesheet"
+    href="/styles/10-rock-paper-scissors.css">
+  </head>
+  <body>
+    <h1>Rock Paper Scissors</h1>
+
+    <button
+      class="hover-effect"
+      onclick="
+      playGame('Rock'); // wywołanie funkcji z przypisanem parametrem
+    "
+    >
+      <img src="images/Rock-emoji.png" class="move-icon">
+    </button>
+
+    <button
+      class="hover-effect"
+      onclick="
+      playGame('Paper'); // wywołanie funkcji z przypisanem parametrem
+    "
+    >
+      <img src="images/Paper-emoji.png" class="move-icon">
+    </button>
+
+    <button
+      class="hover-effect"
+      onclick="
+      playGame('Scissors'); // wywołanie funkcji z przypisanem parametrem
+    "
+    >
+      <img src="images/Scissors-emoji.png" class="move-icon">
+    </button>
+    <h1 class="js-result"></h1>
+    <h1 class="js-moves"></h1>
+    <h1 class="js-score"></h1>
+
+    <button
+      class="hover-effect"
+      onclick="
+      
+      score.wins = 0;
+      score.losses = 0;
+      score.ties = 0;
+
+      localStorage.removeItem('score');
+
+      updateScoreElement();
+
+      //moves reset
+      document.querySelector('.js-moves').innerHTML = ``;
+
+      //result reset
+      document.querySelector('.js-result').innerHTML = ``;
+
+
+    "
+    >
+      Reset Score
+    </button>
+
+
+    <script src="/scripts/10-rock-paper-scissors.js">
+
+    </script>
+  </body>
+</html>
