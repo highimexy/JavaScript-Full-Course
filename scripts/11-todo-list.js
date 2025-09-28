@@ -7,3 +7,4 @@ function addTodo() {
 }
 
 // od jutra 2 godzinny minimum
+// i chuj
