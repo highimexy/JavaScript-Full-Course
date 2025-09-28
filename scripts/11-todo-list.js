@@ -5,3 +5,5 @@ function addTodo() {
  const name = inputElement.value;
  console.log(name);
 }
+
+// od jutra 2 godzinny minimum
