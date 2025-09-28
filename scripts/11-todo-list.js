@@ -8,3 +8,5 @@ function addTodo() {
 
 // od jutra 2 godzinny minimum
 // i chuj
+// po tym react
+// i zdobyc odznaki na git
