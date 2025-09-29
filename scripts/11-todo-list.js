@@ -1,4 +1,22 @@
-const todoList = [];
+const todoList = ['make dinner', 'wash dishes'];
+
+renderTodoList();
+
+function renderTodoList () {
+
+  let todoListHTML = '';
+
+  for (let i = 0; i < todoList.length; i++) {
+    const todo = todoList[i];
+    const html = `<p>${todo}</p>`;
+    todoListHTML += html;
+
+  }
+  console.log(todoListHTML);
+
+  document.querySelector('.js-todo-list')
+  .innerHTML = todoListHTML;
+}
 
 function addTodo() {
  const inputElement = document.querySelector('.js-input');
@@ -10,10 +28,6 @@ function addTodo() {
 
 //epmty imput
 inputElement.value = '';
-
+renderTodoList();
 }
 
-// od jutra 2 godzinny minimum
-// i chuj
-// po tym react
-// i zdobyc odznaki na git hub
