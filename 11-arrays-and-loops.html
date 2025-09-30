@@ -32,7 +32,7 @@
       console.log(myArray);
 
       //.splice() usuwa wartosc z array (pozycja, ilosc)
-      myArray.splice(0, 1);
+      myArray.slice(0, 1);
       console.log(myArray);
 
       let i = 1;
@@ -96,6 +96,15 @@
         numsDoubled.push(num * 2);
       }
       console.log(numsDoubled);
+      console.log("----------------------");
+
+      //metoda slice
+      const array1 = [1, 2, 3];
+      const array2 = array1.slice();
+      array2.push(4);
+      console.log(array1);
+      console.log(array2);
+
     </script>
   </body>
 </html>
