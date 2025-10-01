@@ -105,6 +105,25 @@
       console.log(array1);
       console.log(array2);
 
+      console.log("----------------------");
+      //get the first and second value out of this array
+      const [firstValue, secondValue] = [1, 2, 3]
+      console.log(firstValue, secondValue);
+
+      //More details about loops
+      //1. break = exit loop early
+      //2. continue = 
+      console.log("----------------------");
+      for (let i = 1; i <= 10; i++) {
+        if (i === 3) {
+          continue; //skipuje 3
+        }
+        console.log(i);
+        if (i === 8) {
+          break; // konczy na 8
+        }
+      }
     </script>
   </body>
 </html>
+`
