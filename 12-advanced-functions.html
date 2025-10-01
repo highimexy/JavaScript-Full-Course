@@ -46,6 +46,18 @@
 
       console.log('-------------------------');
       //setTimeout() pozwala wykonac funcke w przyszlosci
+      //3000ms = 3s
+      setTimeout(function(){
+        console.log('timeout');
+      }, 3000);
+
+      console.log('next line')
+
+      //co kazde 3 sekundy odpala kod
+      setInterval(function(){
+        console.log('interval');
+      }, 3000);
+      //async
     </script>
   </body>
 </html>
