@@ -34,6 +34,21 @@
         }
 
       };
+
+      document.body.addEventListener('keydown', (event) => {
+        if (event.key === r) {
+          playGame('Rock');
+        } else if (event.key === p) {
+          playGame('Paper')
+        } else if (event.key === s) {
+          playGame('Scissors');
+        }
+      });
+
+      document.getElementById('js-rock-button').addEventListener('click', () => {
+        playGame('Rock');
+      });
+  
       //Funkcja playGame z parametrem playerMove
       function playGame(playerMove) {
         const computerMove = pickComputerMove();
