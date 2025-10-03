@@ -35,7 +35,7 @@ products.forEach((product) => {
           </div>
 
           <div class="product-name limit-text-to-2-lines">
-            ${product.image}
+            ${product.name}
           </div>
 
           <div class="product-rating-container">
@@ -47,7 +47,7 @@ products.forEach((product) => {
           </div>
 
           <div class="product-price">
-            ${product.priceCents / 100}
+          $${(product.priceCents / 100).toFixed(2)}
           </div>
 
           <div class="product-quantity-container">
@@ -79,3 +79,6 @@ products.forEach((product) => {
     `;
 });
 console.log(productHTML);
+
+document.querySelector('.js-products-grid')
+.innerHTML = productHTML; 
