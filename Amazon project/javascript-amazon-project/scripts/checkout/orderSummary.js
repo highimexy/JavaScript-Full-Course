@@ -6,10 +6,6 @@ import { deliveryOptions, getDeliveryOption } from "../../data/deliveryOptions.j
 import { renderPaymentSummary } from "./paymentSummary.js";
 
 
-const today = dayjs();
-const deliveryDate = today.add(7, 'days');
-console.log(deliveryDate.format('dddd, MMMM D'));
-
 function deliveryOptionsHTML(matchingProduct, cartItem) {
 
   let html = '';
@@ -27,7 +23,7 @@ function deliveryOptionsHTML(matchingProduct, cartItem) {
     const priceString = deliveryOption.priceCents
       === 0
       ? 'FREE'
-      : `$${formatCurrency(deliveryOption.priceCents)} -`;
+      : `$${formatCurrency(deliveryOption.priceCents)}`;
 
     const isChecked = deliveryOption.id === cartItem.deliveryOptionId;
 
@@ -68,12 +64,7 @@ export function renderOrderSummary() {
 
     let deliveryOption = getDeliveryOption(deliveryOptionId);
 
-    deliveryOptions.forEach((option) => {
-      if (option.id === deliveryOptionId) {
-        deliveryOption = option;
-      }
-
-    });
+ 
 
     const today = dayjs();
     const deliveryDate = today.add(
@@ -151,6 +142,7 @@ export function renderOrderSummary() {
         const { productId, deliveryOptionId } = element.dataset;
         updateDeliveryOption(productId, deliveryOptionId);
         renderOrderSummary();
+        renderPaymentSummary();
       })
     });
 };
