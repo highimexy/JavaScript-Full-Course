@@ -100,6 +100,19 @@ const object3 = {
 };
 */
 
+export let products = [];
+
+xhr.addEventListener("load", () => {
+  console.log(xhr.response());
+});
+
+function loadProducts() {
+  const xhr = new XMLHttpRequest();
+  xhr.open("GET", "https://supersimplebackend.dev/products");
+  xhr.semd();
+}
+
+/*
 export const products = [
   {
     id: "e43638ce-6aa0-4b85-b27f-e1d07eb678c6",
@@ -578,3 +591,4 @@ export const products = [
 
   return new Product(productDetails);
 });
+*/
