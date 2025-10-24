@@ -16,7 +16,7 @@ loadProductsFetch(),
   renderOrderSummary();
   renderPaymentSummary();
 });
-/*
+/* 
 new Promise((resolve) => {
   loadProducts(() => {
     resolve("value1");
